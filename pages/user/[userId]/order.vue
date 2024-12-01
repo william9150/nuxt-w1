@@ -1,6 +1,7 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-
+const config = useRuntimeConfig();
+const baseURL = config.app.baseURL;
 // import "bootstrap/js/dist/modal";
 
 const roomId = "a"; // for navigation demo
@@ -15,7 +16,7 @@ const roomId = "a"; // for navigation demo
           <h2 class="mb-0 text-neutral-100 fs-7 fs-md-5 fw-bold">即將來的行程</h2>
         </div>
 
-        <img class="img-fluid rounded-3" src="@/assets/images/room-a-1.png" alt="room-a" />
+        <img class="img-fluid rounded-3" :src="`${baseURL}images/room-a-1.png`" alt="room-a" />
 
         <section class="d-flex flex-column gap-6">
           <h3 class="d-flex align-items-center mb-0 text-neutral-80 fs-8 fs-md-6 fw-bold">
@@ -163,7 +164,7 @@ const roomId = "a"; // for navigation demo
           <img
             class="img-fluid object-fit-cover rounded-3"
             style="max-width: 120px; height: 80px"
-            src="@/assets/images/room-b-sm-1.png"
+            :src="`${baseURL}images/room-b-sm-1.png`"
             alt="room-a"
           />
           <section class="d-flex flex-column gap-4">
@@ -190,7 +191,7 @@ const roomId = "a"; // for navigation demo
           <img
             class="img-fluid object-fit-cover rounded-3"
             style="max-width: 120px; height: 80px"
-            src="@/assets/images/room-b-sm-1.png"
+            :src="`${baseURL}images/room-b-sm-1.png`"
             alt="room-a"
           />
           <section class="d-flex flex-column gap-4">
@@ -217,7 +218,7 @@ const roomId = "a"; // for navigation demo
           <img
             class="img-fluid object-fit-cover rounded-3"
             style="max-width: 120px; height: 80px"
-            src="@/assets/images/room-b-sm-1.png"
+            :src="`${baseURL}images/room-b-sm-1.png`"
             alt="room-a"
           />
           <section class="d-flex flex-column gap-4">
